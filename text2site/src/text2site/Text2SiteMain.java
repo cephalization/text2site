@@ -2,6 +2,7 @@ package text2site;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 
 import javax.swing.*;
 
@@ -9,17 +10,21 @@ public class Text2SiteMain implements ActionListener{
 
 	static JTextArea textArea;
 	static JButton convert;
+	static JTextField textField;
 	
 	/**
 	 * Initialize and present the gui to the user
-	 * @param args
 	 */
 	public static void main(String[] args) {
 		//Basic JFrame initialization
 		JFrame gui = new JFrame();
 		gui.setLayout(new FlowLayout(FlowLayout.LEFT));
-		JLabel instruct1 = new JLabel("Enter your text!");
+		JLabel instruct1 = new JLabel("Enter your title! (One Word)");
 		gui.add(instruct1);
+		textField = new JTextField(10);
+		gui.add(textField);
+		JLabel instruct2 = new JLabel("Enter your text!");
+		gui.add(instruct2);
 		//Listener initialization
 		Text2SiteMain listener = new Text2SiteMain();
 		//User text input area
@@ -38,17 +43,78 @@ public class Text2SiteMain implements ActionListener{
 	/**
 	 * Add HTML Markup to text in the textArea
 	 */
-	private static void convert(){
-		System.out.println("Running convert method.");
-		String text = textArea.getText();
-		System.out.println(text);
+	private static void convert(char c, int index){
+		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(convert)){
-			System.out.println("Starting convert operation!");
-			convert();
+	/**
+	 * Parse the user text by char and determine if convert is needed
+	 * @param text - text at the time of button press represented as a String
+	 * @param index - index value to start parse represented as an integer
+	 */
+	private static void parse(String text, int index){
+	System.out.println("Starting parse operation!");
+	}
+	
+	/**
+	 * Parse an HTML file and convert it into a String
+	 * @param file
+	 * @return
+	 */
+	private static String parseToString(String file){
+		String text;
+		
+		return null;
+	}
+	
+	/**
+	 * Create the .html file to be formatted
+	 */
+	private void createFile(String title) {
+		Writer writer = null;
+
+		try {
+		    writer = new BufferedWriter(new OutputStreamWriter(
+		          new FileOutputStream(title + ".html"), "utf-8"));
+		} catch (IOException ex) {
+		  // report
+		} finally {
+		   try {writer.close();} catch (Exception ex) {/*ignore*/}
 		}
 	}
+	
+	/**
+	 * Copy initial block of HTML to new document
+	 * @throws IOException 
+	 */
+	private void initialization() throws IOException {
+		FileWriter fileWrite = new FileWriter("setup\\initial.html"); 
+	}
+	
+	/**
+	 * Copy end tags of HTML to new document
+	 * @throws IOException 
+	 */
+	private void finalization() throws IOException {
+		FileWriter fileWrite = new FileWriter("setup\\final.html");
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		if (e.getSource().equals(convert)){
+			String text = textArea.getText();
+			String title = textField.getText();
+			if (!title.isEmpty() && !text.isEmpty()) {
+				createFile(title);
+				initialization();
+				parse(text, 0);
+				finalization();
+			} else {
+				System.out.println("Please enter title AND text...");
+			}
+		}
+	}
+	
+	
 }
