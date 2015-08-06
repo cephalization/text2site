@@ -1,5 +1,7 @@
 # text2site
-A tool for formatting plaintext into HTML markup. Used on DEABnet!
+A tool for formatting plaintext into HTML markup. Used on DEABnet! <br>
+To adjust to your website, copy all HTML that comes before the text into initial.html, <br>
+and everything after into final.html!
 
 ##REQUIREMENTS -
 * Latest version of Java
