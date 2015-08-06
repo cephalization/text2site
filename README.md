@@ -12,3 +12,13 @@ A tool for formatting plaintext into HTML markup.
 * Write/Build closing tags
 * Read user input
 * Format user input
+
+##TO COMPILE/UNIX##
+###################
+* javac -g Text2SiteMain.java
+* mkdir tex2site
+* mv Text2SiteMain.class tex2site/Text2SiteMain.class
+* jar cfm text2site.jar manifest.txt tex2site/Text2SiteMain.class
+
+##TO COMPILE/WINDOWS##
+######################

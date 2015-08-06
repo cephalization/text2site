@@ -191,7 +191,7 @@ public class Text2SiteMain implements ActionListener {
 				createFile(title);
 				// initialize
 				try {
-					convert("setup\\initial.html");
+					convert("initial.html");
 				} catch (IOException e1) {
 					e1.printStackTrace();
 					System.out.println("Please create initial.html in setup folder.");
@@ -204,7 +204,7 @@ public class Text2SiteMain implements ActionListener {
 				}
 				// finalize
 				try {
-					convert("setup\\final.html");
+					convert("final.html");
 				} catch (IOException e1) {
 					e1.printStackTrace();
 					System.out.println("Please create final.html in setup folder.");

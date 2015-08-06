@@ -1,1 +1,2 @@
-Main-Class: Text2Site.Text2Site
+Class-Path: .
+Main-Class: text2site.Text2SiteMain
