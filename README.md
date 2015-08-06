@@ -8,7 +8,7 @@ A tool for formatting plaintext into HTML markup. Used on DEABnet!
 
 ##METHODS -
 * Write/Build from file, navbar/head/open HTML
-* Write/Build formatted blog post (only auto adds <p> tags for now)
+* Write/Build formatted blog post (only auto adds p tags for now)
 * Write/Build from file, closing tags
 * Read user input
 * Format user input
