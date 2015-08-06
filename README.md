@@ -1,15 +1,15 @@
 # text2site
-A tool for formatting plaintext into HTML markup.
+A tool for formatting plaintext into HTML markup. Used on DEABnet!
 
 ##REQUIREMENTS -
-* File I/O - Read/Write; text parsing/printing
-* Multiple OS Support; Windows, Unix
-* Write in Java, use relative paths
+* Latest version of Java
+* initial.html in same directory as program
+* final.html in same directory as program
 
 ##METHODS -
-* Write/Build navbar/head/open HTML
-* Write/Build formatted blog post
-* Write/Build closing tags
+* Write/Build from file, navbar/head/open HTML
+* Write/Build formatted blog post (only auto adds <p> tags for now)
+* Write/Build from file, closing tags
 * Read user input
 * Format user input
 
@@ -22,3 +22,4 @@ A tool for formatting plaintext into HTML markup.
 
 ##TO COMPILE/WINDOWS##
 ######################
+* I'll get here eventually...
