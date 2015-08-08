@@ -21,7 +21,7 @@ When creating a DEABnet post, remember to edit initial.html with the appropriate
 * javac -g Text2SiteMain.java
 * mkdir tex2site
 * mv Text2SiteMain.class tex2site/Text2SiteMain.class
-* jar cfm text2site.jar manifest.txt tex2site/Text2SiteMain.class
+* jar cfm text2site.jar manifest.txt text2site/Text2SiteMain.class
 
 ##TO COMPILE/WINDOWS##
 ######################
