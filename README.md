@@ -5,7 +5,7 @@ and everything after into final.html! <br>
 When creating a DEABnet post, remember to edit initial.html with the appropriate blog title!
 
 ##REQUIREMENTS -
-* Latest version of Java
+* Latest version of Java and JDK (if compiling)
 * initial.html in same directory as program
 * final.html in same directory as program
 
@@ -18,6 +18,7 @@ When creating a DEABnet post, remember to edit initial.html with the appropriate
 
 ##TO COMPILE/UNIX##
 ###################
+* cd into text2site directory
 * javac -g Text2SiteMain.java
 * mkdir tex2site
 * mv Text2SiteMain.class tex2site/Text2SiteMain.class
@@ -25,4 +26,11 @@ When creating a DEABnet post, remember to edit initial.html with the appropriate
 
 ##TO COMPILE/WINDOWS##
 ######################
-* I'll get here eventually...
+* Open CMD with elevated privileges
+* Make sure the directory containing the latest jdk is set in path
+* cd into text2site directory
+* javac -g Text2SiteMain.java
+* mkdir tex2site
+* move Text2SiteMain.class tex2site/
+* jar cfm text2site.jar manifest.txt text2site/Text2SiteMain.class
+* Alternatively, run compile.bat
