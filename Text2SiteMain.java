@@ -15,7 +15,7 @@ public class Text2SiteMain implements ActionListener {
 	static JTextField textField;
 	static String title;
 
-	/**
+	/*
 	 * Initialize and present the gui to the user
 	 */
 	public static void main(String[] args) {
@@ -47,13 +47,11 @@ public class Text2SiteMain implements ActionListener {
 	/**
 	 * Parse the user text by char and determine if HTML tag conversion is
 	 * needed
-	 * 
-	 * @param text
-	 *            - text at the time of button press represented as a String
-	 * @param convert
-	 *            - boolean flag dictated if the parse adds HTML tags or not
-	 * @return a string of the newly parsed and converted text
-	 * @throws IOException
+	 *
+	 * @param	text		Text at the time of button press represented as a String
+	 * @param	convert		boolean flag dictated if the parse adds HTML tags or not
+	 * @return	a string	of the newly parsed and converted text
+	 * @throws	IOException
 	 */
 	private static String parse(String text, boolean convert) throws IOException {
 		System.out.println("Starting parse operation!");
@@ -101,7 +99,7 @@ public class Text2SiteMain implements ActionListener {
 
 	/**
 	 * Print a string to a file
-	 * 
+	 *
 	 * @param text
 	 * @param name
 	 * @return
@@ -133,7 +131,7 @@ public class Text2SiteMain implements ActionListener {
 
 	/**
 	 * Create and append string of given file to the new HTML document
-	 * 
+	 *
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -155,7 +153,7 @@ public class Text2SiteMain implements ActionListener {
 	/**
 	 * Read a file by each char and convert that to a large string including
 	 * line breaks and punctuation.
-	 * 
+	 *
 	 * @param location
 	 *            - the location of the file to convert to a string represented
 	 *            as a string
