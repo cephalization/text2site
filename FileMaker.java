@@ -56,14 +56,15 @@ public class FileMaker{
      */
     public void writeText(String text) throws IOException{
         PrintWriter writer = new PrintWriter(this.output);
-        InputStreamReader headReader = new InputStreamReader(new FileInputStream(this.head));
-        InputStreamReader footReader = new InputStreamReader(new FileInputStream(this.foot));
+        FileReader headReader = new FileReader(this.head);
+        FileReader footReader = new FileReader(this.foot);
 
         char current = (char)headReader.read();
         while(current != -1){
             writer.print(current);
             current = (char)headReader.read();
         }
+        headReader.close();
         writer.print("\n");
         writer.print(parse(text));
         writer.print("\n");
@@ -72,6 +73,7 @@ public class FileMaker{
             writer.print(current);
             current = (char)footReader.read();
         }
+        footReader.close();
 
         writer.flush();
         writer.close();
