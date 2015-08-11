@@ -61,10 +61,10 @@ public class FileMaker{
 
         System.out.println("Starting to copy head");
 
-        char current = (char)headReader.read();
+        int current = headReader.read();
         while(current != -1){
-            writer.print(current);
-            current = (char)headReader.read();
+            writer.print((char)current);
+            current = headReader.read();
         }
 
         System.out.println("Finished copying head");
@@ -77,10 +77,10 @@ public class FileMaker{
 
         System.out.println("Starting to copy foot");
 
-        current = (char)footReader.read();
+        current = footReader.read();
         while(current != -1){
-            writer.print(current);
-            current = (char)footReader.read();
+            writer.print((char)current);
+            current = footReader.read();
         }
         footReader.close();
 
