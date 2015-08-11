@@ -19,18 +19,18 @@ When creating a DEABnet post, remember to edit initial.html with the appropriate
 ##TO COMPILE/UNIX##
 ###################
 * cd into text2site directory
-* javac -g Text2SiteMain.java
+* javac -g Text2SiteMain.java FileMaker.java
 * mkdir tex2site
-* mv Text2SiteMain.class tex2site/Text2SiteMain.class
-* jar cfm text2site.jar manifest.txt text2site/Text2SiteMain.class
+* mv *.class tex2site/
+* jar cfm text2site.jar manifest.txt text2site/*.class
 
 ##TO COMPILE/WINDOWS##
 ######################
 * Open CMD with elevated privileges
 * Make sure the directory containing the latest jdk is set in path
 * cd into text2site directory
-* javac -g Text2SiteMain.java
+* javac -g Text2SiteMain.java FileMaker.java
 * mkdir tex2site
-* move Text2SiteMain.class tex2site/
-* jar cfm text2site.jar manifest.txt text2site/Text2SiteMain.class
+* move *.class tex2site/
+* jar cfm text2site.jar manifest.txt text2site/*.class
 * Alternatively, run compile.bat
