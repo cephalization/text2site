@@ -56,9 +56,9 @@ public class Text2SiteMain implements ActionListener {
 
 				try{
 					fileMaker.writeText(text);
-				}catch(IOException e){
-					System.out.println(e);
-					e.printStackTrace();
+				}catch(IOException exception){
+					System.out.println(exception);
+					exception.printStackTrace();
 				}
 			} else {
 				System.out.println("Please enter title AND text...");
