@@ -59,18 +59,18 @@ public class FileMaker{
         InputStreamReader headReader = new InputStreamReader(new FileInputStream(this.head));
         InputStreamReader footReader = new InputStreamReader(new FileInputStream(this.foot));
 
-        char current = headReader.read();
+        char current = (char)headReader.read();
         while(current != -1){
             writer.print(current);
-            current = headReader.read();
+            current = (char)headReader.read();
         }
         writer.print("\n");
         writer.print(parse(text));
         writer.print("\n");
-        current = footReader.read();
+        current = (char)footReader.read();
         while(current != -1){
-            writer.print(footScanner.next() + " ");
-            current = footReader.read();
+            writer.print(current);
+            current = (char)footReader.read();
         }
 
         writer.flush();
