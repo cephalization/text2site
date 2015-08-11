@@ -59,21 +59,32 @@ public class FileMaker{
         FileReader headReader = new FileReader(this.head);
         FileReader footReader = new FileReader(this.foot);
 
+        System.out.println("Starting to copy head");
+
         char current = (char)headReader.read();
         while(current != -1){
             writer.print(current);
             current = (char)headReader.read();
         }
+
+        System.out.println("Finished copying head");
+        System.out.println("Starting to parse the text field");
+
         headReader.close();
         writer.print("\n");
         writer.print(parse(text));
         writer.print("\n");
+
+        System.out.println("Starting to copy foot");
+
         current = (char)footReader.read();
         while(current != -1){
             writer.print(current);
             current = (char)footReader.read();
         }
         footReader.close();
+
+        System.out.println("Finished copying foot");
 
         writer.flush();
         writer.close();
