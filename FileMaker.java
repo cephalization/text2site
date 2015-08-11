@@ -39,7 +39,7 @@ public class FileMaker{
             }else if(currentChar == 10 && lastChar == 10){
                 output += "</p>" + (char)10 + "<p>" + (char)10;
             }else if(i == input.length() - 1){
-                output += "" + currentChar + (char)10 + "</p>";
+                //output += "" + currentChar + (char)10 + "</p>";
             }else{
                 output += currentChar;
             }
