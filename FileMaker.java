@@ -16,7 +16,7 @@ public class FileMaker{
     public FileMaker(String title){
         this.head = new File("initial.html");
         this.foot = new File("final.html");
-        this.output = new File("title.html");
+        this.output = new File(title + ".html");
     }
 
     /**
@@ -66,5 +66,8 @@ public class FileMaker{
         while(footScanner.hasNext()){
             writer.print(footScanner.next() + " ");
         }
+
+        writer.flush();
+        writer.close();
     }
 }
