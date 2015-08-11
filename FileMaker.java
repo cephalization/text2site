@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class FileMaker{
 
-    private FileChannel head;
-    private FileChannel foot;
-    private FileChannel output;
+    private File head;
+    private File foot;
+    private File output;
 
     public FileMaker(){
 
@@ -64,7 +64,7 @@ public class FileMaker{
         }
         writer.print(parse(text));
         while(footScanner.hasNext()){
-            writer.print(footScanner.next() + " ")
+            writer.print(footScanner.next() + " ");
         }
     }
 }
