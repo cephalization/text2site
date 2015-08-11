@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import FileMaker;
+import text2site.FileMaker;
 
 import javax.swing.*;
 
