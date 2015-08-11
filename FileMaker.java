@@ -39,7 +39,7 @@ public class FileMaker{
             }else if(currentChar == 10 && lastChar == 10){
                 output += "</p>" + (char)10 + "<p>" + (char)10;
             }else if(i == input.length() - 1){
-                output += (char)10 + "</p>";
+                output += "" + currentChar + (char)10 + "</p>";
             }else{
                 output += currentChar;
             }
@@ -56,15 +56,21 @@ public class FileMaker{
      */
     public void writeText(String text) throws IOException{
         PrintWriter writer = new PrintWriter(this.output);
-        Scanner headScanner = new Scanner(this.head);
-        Scanner footScanner = new Scanner(this.foot);
+        InputStreamReader headReader = new InputStreamReader(new FileInputStream(this.head));
+        InputStreamReader footReader = new InputStreamReader(new FileInputStream(this.foot));
 
-        while(headScanner.hasNext()){
-            writer.print(headScanner.next() + " ");
+        char current = headReader.read();
+        while(current != -1){
+            writer.print(current);
+            current = headReader.read();
         }
+        writer.print("\n");
         writer.print(parse(text));
-        while(footScanner.hasNext()){
+        writer.print("\n");
+        current = footReader.read();
+        while(current != -1){
             writer.print(footScanner.next() + " ");
+            current = footReader.read();
         }
 
         writer.flush();
